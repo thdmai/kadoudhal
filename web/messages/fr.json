@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "description": "Traductions du Coran, des hadiths et du fiqh. Écoute, lecture et téléchargement."
+  },
+  "nav": {
+    "home": "Accueil",
+    "coran": "Coran",
+    "hadith": "Hadith",
+    "fiqh": "Fiqh",
+    "menu": "Menu",
+    "language": "Langue",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "home": {
+    "tagline": "Traductions du Coran, des hadiths et du fiqh. L’accueil est ouvert. Le contenu demande un compte.",
+    "open": "Ouvrir"
+  },
+  "collections": {
+    "coran": {
+      "unit": "Sourate",
+      "excerpt": "Traduction et récitation, sourate par sourate. Écoute, lecture et téléchargement.",
+      "imageAlt": "Coran ouvert, pages enluminées et chapelet",
+      "contentLabel": "le Coran"
+    },
+    "hadith": {
+      "unit": "Bâb",
+      "excerpt": "Recueils classés par bâb. Chaque piste se lit, s’écoute et se télécharge.",
+      "imageAlt": "Recueils de hadith (Sahih al-Bukhari, Muslim et autres) sur une étagère",
+      "contentLabel": "les hadiths"
+    },
+    "fiqh": {
+      "unit": "Chapitre",
+      "excerpt": "Kitabs de jurisprudence, chapitre par chapitre, avec le texte et l’audio.",
+      "imageAlt": "Manuscrit de fiqh Multaqa al-Abhur, texte et gloses en marge",
+      "contentLabel": "le fiqh"
+    },
+    "fallbackLabel": "ce contenu"
+  },
+  "content": {
+    "empty": "Les {unit}s arriveront ici dès qu’une séance sera publiée.",
+    "intro": "Écoute et lis les séances publiées, {unit} par {unit}.",
+    "searchPlaceholder": "Rechercher (n°, titre, djouzou, hizb…)",
+    "searchEmpty": "Aucun résultat pour « {query} ».",
+    "sessionOne": "{count} séance",
+    "sessionMany": "{count} séances",
+    "open": "ouvrir",
+    "collapse": "replier",
+    "collapseList": "Replier la liste",
+    "seeMoreOne": "Voir la {count} séance restante",
+    "seeMoreMany": "Voir les {count} séances restantes",
+    "close": "Fermer",
+    "enlarge": "Agrandir la page de lecture — {title}",
+    "audioUnavailable": "Audio indisponible.",
+    "audioUnsupported": "Votre navigateur ne lit pas l’audio.",
+    "kind": {
+      "djouzou": "Djouzou",
+      "soumin": "Soumin",
+      "seance": "Séance",
+      "fallback": "Séance"
+    }
+  },
+  "profile": {
+    "title": "Profil",
+    "subtitle": "Modifie ton nom, ton email ou ton mot de passe, puis valide.",
+    "back": "Retour à l’accueil",
+    "menuAria": "Profil {name}",
+    "admin": "Administration",
+    "edit": "Changer de profil",
+    "signOut": "Se déconnecter",
+    "displayName": "Nom affiché",
+    "email": "Email",
+    "newPasswordOptional": "Nouveau mot de passe (optionnel)",
+    "setPasswordOptional": "Définir un mot de passe (optionnel)",
+    "passwordPlaceholderKeep": "Laisser vide pour ne pas changer",
+    "passwordPlaceholderGoogle": "Optionnel — compte Google",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "confirmPasswordPlaceholder": "Uniquement si tu changes le mot de passe",
+    "currentPassword": "Mot de passe actuel",
+    "currentPasswordPlaceholder": "Obligatoire pour valider",
+    "googleNote": "Connecté avec Google — pas de mot de passe actuel requis pour valider.",
+    "saving": "Validation…",
+    "save": "Valider"
+  },
+  "auth": {
+    "loginTitle": "Connexion",
+    "loginLead": "Un compte est nécessaire pour ouvrir {content}.",
+    "signupTitle": "Créer un compte",
+    "signupLead": "Accès Coran, Hadith et Fiqh. Un email de confirmation sera envoyé.",
+    "forgotTitle": "Mot de passe oublié",
+    "forgotLead": "Indique ton email. Tu recevras un lien pour choisir un nouveau mot de passe.",
+    "email": "Email",
+    "emailPlaceholder": "Votre email",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Votre mot de passe",
+    "passwordMinPlaceholder": "Au moins 8 caractères",
+    "passwordConfirm": "Confirmer le mot de passe",
+    "passwordConfirmPlaceholder": "Répétez le mot de passe",
+    "displayName": "Nom affiché",
+    "displayNamePlaceholder": "Votre nom",
+    "forgotLink": "Mot de passe oublié ?",
+    "forgotLinkShort": "Mot de passe oublié",
+    "signingIn": "Connexion…",
+    "signIn": "Se connecter",
+    "signInArrow": "Se connecter →",
+    "orContinue": "ou continuez avec",
+    "continueGoogle": "Continuer avec Google",
+    "noAccount": "Vous n’avez pas de compte ?",
+    "createAccount": "Créer un compte",
+    "creating": "Création…",
+    "createMyAccount": "Créer mon compte",
+    "sending": "Envoi…",
+    "sendLink": "Envoyer le lien",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "imageAlt": "Coran ouvert avec chapelet",
+    "errors": {
+      "confirm": "Le lien de confirmation est invalide ou expiré. Réessaie ou reconnecte-toi.",
+      "config": "Supabase n’est pas configuré sur l’application.",
+      "oauth": "Google n’est pas activé sur ton projet Supabase. Va dans Authentication → Providers → Google → Enable, puis réessaie.",
+      "disabled": "Ce compte a été désactivé. Contacte l’administration."
+    }
+  }
+}

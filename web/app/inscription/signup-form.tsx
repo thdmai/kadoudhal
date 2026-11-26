@@ -1,0 +1,108 @@
+"use client";
+
+import Link from "next/link";
+import { useActionState } from "react";
+import { signInWithGoogleAction, signUpAction } from "@/app/auth/actions";
+import { GoogleMark } from "@/components/google-mark";
+import { PasswordField } from "@/components/password-field";
+import { useActionToast } from "@/components/toast";
+import type { AuthFormState } from "@/lib/auth/schemas";
+import { useDictionary } from "@/lib/i18n/provider";
+
+const initialState: AuthFormState | null = null;
+
+export function SignupForm({ nextPath }: { nextPath: string }) {
+  const [state, formAction, pending] = useActionState(signUpAction, initialState);
+  useActionToast(state);
+  const dictionary = useDictionary();
+
+  return (
+    <div className="mt-5 flex flex-col gap-4">
+      <form action={formAction} className="flex flex-col gap-3.5">
+        <label className="flex flex-col gap-1.5 text-sm text-[var(--auth-text)]">
+          {dictionary.auth.displayName}
+          <input
+            name="displayName"
+            type="text"
+            required
+            autoComplete="name"
+            minLength={2}
+            placeholder={dictionary.auth.displayNamePlaceholder}
+            className="auth-field"
+          />
+        </label>
+        {state?.fieldErrors?.displayName?.[0] ? (
+          <p className="text-sm text-red-700">
+            {state.fieldErrors.displayName[0]}
+          </p>
+        ) : null}
+
+        <label className="flex flex-col gap-1.5 text-sm text-[var(--auth-text)]">
+          {dictionary.auth.email}
+          <input
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            placeholder={dictionary.auth.emailPlaceholder}
+            className="auth-field"
+          />
+        </label>
+        {state?.fieldErrors?.email?.[0] ? (
+          <p className="text-sm text-red-700">{state.fieldErrors.email[0]}</p>
+        ) : null}
+
+        <PasswordField
+          name="password"
+          label={dictionary.auth.password}
+          autoComplete="new-password"
+          placeholder={dictionary.auth.passwordMinPlaceholder}
+          error={state?.fieldErrors?.password?.[0]}
+          tone="light"
+        />
+
+        <PasswordField
+          name="passwordConfirm"
+          label={dictionary.auth.passwordConfirm}
+          autoComplete="new-password"
+          placeholder={dictionary.auth.passwordConfirmPlaceholder}
+          error={state?.fieldErrors?.passwordConfirm?.[0]}
+          tone="light"
+        />
+
+        <input type="hidden" name="next" value={nextPath} />
+        <button type="submit" className="auth-button" disabled={pending}>
+          {pending
+            ? dictionary.auth.creating
+            : dictionary.auth.createMyAccount}
+        </button>
+      </form>
+
+      <p className="auth-divider">{dictionary.auth.orContinue}</p>
+
+      <form action={signInWithGoogleAction}>
+        <input type="hidden" name="next" value={nextPath} />
+        <input type="hidden" name="returnTo" value="/inscription" />
+        <button type="submit" className="auth-button-google">
+          <GoogleMark />
+          {dictionary.auth.continueGoogle}
+        </button>
+      </form>
+
+      <div className="flex flex-wrap items-center justify-between gap-3 text-sm">
+        <Link
+          href={`/connexion?next=${encodeURIComponent(nextPath)}`}
+          className="auth-link relative z-10 py-1"
+        >
+          {dictionary.auth.signInArrow}
+        </Link>
+        <Link
+          href="/mot-de-passe-oublie"
+          className="auth-link-muted relative z-10 py-1"
+        >
+          {dictionary.auth.forgotLinkShort}
+        </Link>
+      </div>
+    </div>
+  );
+}

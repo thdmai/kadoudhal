@@ -1,0 +1,18 @@
+package com.kadoudhal.api;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest(properties = {
+		"spring.autoconfigure.exclude="
+				+ "org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration,"
+				+ "org.springframework.boot.hibernate.autoconfigure.HibernateJpaAutoConfiguration,"
+				+ "org.springframework.boot.hibernate.autoconfigure.DataSourceInitializationAutoConfiguration"
+})
+class ApiApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

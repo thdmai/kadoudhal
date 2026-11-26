@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "description": "Translations of the Quran, hadith, and fiqh. Listen, read, and download."
+  },
+  "nav": {
+    "home": "Home",
+    "coran": "Quran",
+    "hadith": "Hadith",
+    "fiqh": "Fiqh",
+    "menu": "Menu",
+    "language": "Language",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "home": {
+    "tagline": "Translations of the Quran, hadith, and fiqh. The home page is open. Content requires an account.",
+    "open": "Open"
+  },
+  "collections": {
+    "coran": {
+      "unit": "Surah",
+      "excerpt": "Translation and recitation, surah by surah. Listen, read, and download.",
+      "imageAlt": "Open Quran, illuminated pages and prayer beads",
+      "contentLabel": "the Quran"
+    },
+    "hadith": {
+      "unit": "Bab",
+      "excerpt": "Collections arranged by bab. Each track can be read, listened to, and downloaded.",
+      "imageAlt": "Hadith collections (Sahih al-Bukhari, Muslim and others) on a shelf",
+      "contentLabel": "the hadiths"
+    },
+    "fiqh": {
+      "unit": "Chapter",
+      "excerpt": "Fiqh kitabs, chapter by chapter, with text and audio.",
+      "imageAlt": "Fiqh manuscript Multaqa al-Abhur, text and margin glosses",
+      "contentLabel": "fiqh"
+    },
+    "fallbackLabel": "this content"
+  },
+  "content": {
+    "empty": "{unit}s will appear here once a session is published.",
+    "intro": "Listen to and read published sessions, {unit} by {unit}.",
+    "searchPlaceholder": "Search (n°, title, juz, hizb…)",
+    "searchEmpty": "No results for “{query}”.",
+    "sessionOne": "{count} session",
+    "sessionMany": "{count} sessions",
+    "open": "expand",
+    "collapse": "collapse",
+    "collapseList": "Collapse list",
+    "seeMoreOne": "See the {count} remaining session",
+    "seeMoreMany": "See the {count} remaining sessions",
+    "close": "Close",
+    "enlarge": "Enlarge reading page — {title}",
+    "audioUnavailable": "Audio unavailable.",
+    "audioUnsupported": "Your browser does not support audio.",
+    "kind": {
+      "djouzou": "Juz",
+      "soumin": "Thumn",
+      "seance": "Session",
+      "fallback": "Session"
+    }
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Update your name, email, or password, then save.",
+    "back": "Back to home",
+    "menuAria": "Profile {name}",
+    "admin": "Administration",
+    "edit": "Edit profile",
+    "signOut": "Sign out",
+    "displayName": "Display name",
+    "email": "Email",
+    "newPasswordOptional": "New password (optional)",
+    "setPasswordOptional": "Set a password (optional)",
+    "passwordPlaceholderKeep": "Leave blank to keep current",
+    "passwordPlaceholderGoogle": "Optional — Google account",
+    "confirmNewPassword": "Confirm new password",
+    "confirmPasswordPlaceholder": "Only if you change the password",
+    "currentPassword": "Current password",
+    "currentPasswordPlaceholder": "Required to save",
+    "googleNote": "Signed in with Google — no current password needed to save.",
+    "saving": "Saving…",
+    "save": "Save"
+  },
+  "auth": {
+    "loginTitle": "Sign in",
+    "loginLead": "An account is required to open {content}.",
+    "signupTitle": "Create an account",
+    "signupLead": "Access to Quran, Hadith, and Fiqh. A confirmation email will be sent.",
+    "forgotTitle": "Forgot password",
+    "forgotLead": "Enter your email. You will receive a link to choose a new password.",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "password": "Password",
+    "passwordPlaceholder": "Your password",
+    "passwordMinPlaceholder": "At least 8 characters",
+    "passwordConfirm": "Confirm password",
+    "passwordConfirmPlaceholder": "Repeat the password",
+    "displayName": "Display name",
+    "displayNamePlaceholder": "Your name",
+    "forgotLink": "Forgot password?",
+    "forgotLinkShort": "Forgot password",
+    "signingIn": "Signing in…",
+    "signIn": "Sign in",
+    "signInArrow": "Sign in →",
+    "orContinue": "or continue with",
+    "continueGoogle": "Continue with Google",
+    "noAccount": "Don’t have an account?",
+    "createAccount": "Create an account",
+    "creating": "Creating…",
+    "createMyAccount": "Create my account",
+    "sending": "Sending…",
+    "sendLink": "Send link",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "imageAlt": "Open Quran with prayer beads",
+    "errors": {
+      "confirm": "The confirmation link is invalid or expired. Try again or sign in.",
+      "config": "Supabase is not configured on this application.",
+      "oauth": "Google is not enabled on your Supabase project. Go to Authentication → Providers → Google → Enable, then try again.",
+      "disabled": "This account has been disabled. Contact administration."
+    }
+  }
+}

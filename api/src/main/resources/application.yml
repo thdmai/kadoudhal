@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: kadoudhal-api
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${DATABASE_USER:postgres}
+    password: ${DATABASE_PASSWORD:}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: public
+        jdbc:
+          time_zone: UTC
+
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: when_authorized
+
+kadoudhal:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3000}
+
+logging:
+  level:
+    root: INFO
+    com.kadoudhal: INFO
