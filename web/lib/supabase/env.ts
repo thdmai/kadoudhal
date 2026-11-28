@@ -14,8 +14,12 @@ export function getSupabaseEnv() {
 export function requireSupabaseEnv() {
   const env = getSupabaseEnv();
   if (!env) {
+    const isProd =
+      process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
     throw new Error(
-      "Supabase n’est pas configuré. Ajoute NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY dans web/.env.local puis relance npm run dev.",
+      isProd
+        ? "Supabase n’est pas configuré sur Vercel. Ajoute NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY (ou PUBLISHABLE_KEY) dans Environment Variables, puis Redeploy."
+        : "Supabase n’est pas configuré. Ajoute NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY dans .env.local à la racine, puis relance npm run dev.",
     );
   }
   return env;

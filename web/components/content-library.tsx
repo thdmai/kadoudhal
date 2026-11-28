@@ -30,13 +30,15 @@ export async function ContentLibrary({
     <>
       <SiteHeader />
       <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-5 py-10">
-        <ContentSearchList
-          sections={sections}
-          unit={unit}
-          title={title}
-          titleAr={titleAr}
-          intro={intro}
-        />
+        <div className="site-fade-up" style={{ animationDelay: "0ms" }}>
+          <ContentSearchList
+            sections={sections}
+            unit={unit}
+            title={title}
+            titleAr={titleAr}
+            intro={intro}
+          />
+        </div>
       </main>
       <SiteFooter />
     </>

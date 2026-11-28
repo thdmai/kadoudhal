@@ -13,10 +13,12 @@ import { createClient } from "@/lib/supabase/server";
 import { getSupabaseEnv } from "@/lib/supabase/env";
 
 function missingEnvState(): AuthFormState {
+  const isProd = process.env.VERCEL === "1" || process.env.NODE_ENV === "production";
   return {
     ok: false,
-    message:
-      "Supabase n’est pas branché. Crée web/.env.local avec NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY, puis relance npm run dev.",
+    message: isProd
+      ? "Supabase n’est pas branché sur Vercel. Ajoute NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY (ou PUBLISHABLE_KEY) dans Project → Settings → Environment Variables, puis Redeploy."
+      : "Supabase n’est pas branché. Vérifie .env.local à la racine (NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY ou PUBLISHABLE_KEY), puis relance npm run dev.",
   };
 }
 

@@ -24,7 +24,6 @@ export async function SiteHeader() {
         <BrandLogo href="/" variant="dark" />
 
         <div className="flex items-center gap-2 sm:gap-3 md:gap-5">
-          {/* Desktop uniquement — pas dans le header mobile */}
           <div className="hidden md:block">
             <LanguageSwitcher variant="dark" />
           </div>
@@ -32,13 +31,13 @@ export async function SiteHeader() {
           <input id="site-nav" type="checkbox" className="peer/nav sr-only" />
           <label
             htmlFor="site-nav"
-            className="cursor-pointer rounded-md border border-gold/40 px-3 py-1.5 text-sm text-white md:hidden"
+            className="cursor-pointer rounded-md border border-gold/40 px-3 py-1.5 text-sm text-white transition active:scale-95 md:hidden"
           >
             {dictionary.nav.menu}
           </label>
 
-          <nav className="absolute inset-x-0 top-full z-20 hidden flex-col gap-1 border-b border-gold/25 bg-ink px-5 py-3 peer-checked/nav:flex md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0">
-            {/* Mobile : FR|EN + initiales sur une ligne, dans le Menu */}
+          <nav className="absolute inset-x-0 top-full z-20 hidden flex-col gap-1 border-b border-gold/25 bg-ink px-5 py-3 shadow-[0_12px_30px_rgb(0_0_0_/_0.45)] peer-checked/nav:flex md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0 md:shadow-none">
+            {/* Mobile : langues + initiales sur la même ligne */}
             <div className="flex items-center justify-between gap-3 border-b border-gold/20 pb-3 md:hidden">
               <LanguageSwitcher variant="dark" />
               {profile ? (
@@ -54,7 +53,7 @@ export async function SiteHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="py-2 text-[0.95rem] tracking-wide text-white/90 transition-colors hover:text-gold md:py-0"
+                className="rounded-md py-2.5 text-[0.95rem] tracking-wide text-white/90 transition-all duration-200 hover:translate-x-1 hover:text-gold active:translate-x-1 active:text-gold md:py-0 md:hover:translate-x-0 md:hover:opacity-90"
               >
                 {link.label}
               </Link>
